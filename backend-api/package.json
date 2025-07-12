@@ -1,0 +1,40 @@
+{
+  "name": "dicoding_tugasakhir_belajar_fundamental_back-end_dengan_javascript_01",
+  "version": "1.0.0",
+  "description": "Terdapat 5 kriteria utama yang harus Anda penuhi dalam membuat proyek OpenMusic API.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "migrate": "node-pg-migrate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fauzihiz/Dicoding_TugasAKhir_Belajar_Fundamental_Back-End_dengan_JavaScript_01.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fauzihiz/Dicoding_TugasAKhir_Belajar_Fundamental_Back-End_dengan_JavaScript_01/issues"
+  },
+  "homepage": "https://github.com/fauzihiz/Dicoding_TugasAKhir_Belajar_Fundamental_Back-End_dengan_JavaScript_01#readme",
+  "dependencies": {
+    "@hapi/hapi": "^21.4.0",
+    "@hapi/inert": "^7.1.0",
+    "@hapi/jwt": "^3.2.0",
+    "amqplib": "^0.10.8",
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.0.1",
+    "file-type": "^21.0.0",
+    "joi": "^17.13.3",
+    "nanoid": "^3.3.11",
+    "nodemailer": "^7.0.5",
+    "pg": "^8.16.3",
+    "redis": "^5.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.31.0",
+    "eslint-config-dicodingacademy": "^0.9.5",
+    "node-pg-migrate": "^8.0.3"
+  }
+}
