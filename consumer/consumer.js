@@ -2,7 +2,13 @@ require('dotenv').config();
 const amqp = require('amqplib');
 const nodemailer = require('nodemailer');
 const { Pool } = require('pg');
-const pool = new Pool(); 
+const pool = new Pool({
+  user: process.env.PGUSER,
+  host: process.env.PGHOST,
+  database: process.env.PGDATABASE,
+  password: process.env.PGPASSWORD,
+  port: process.env.PGPORT,
+});
 //const axios = require('axios');
 const config = require('./utils/config');
 
@@ -42,8 +48,8 @@ const getPlaylistData = async (playlistId) => {
   const songsQuery = {
     text: `SELECT songs.id, songs.title, songs.performer
            FROM songs
-           JOIN playlistsongs ON songs.id = playlistsongs."songId"
-           WHERE playlistsongs."playlistId" = $1`,
+           JOIN playlist_songs ON songs.id = playlist_songs."songId"
+           WHERE playlist_songs."playlistId" = $1`,
     values: [playlistId],
   };
 
