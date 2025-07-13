@@ -2,7 +2,7 @@ require('dotenv').config();
 const amqp = require('amqplib');
 const nodemailer = require('nodemailer');
 const axios = require('axios');
-const config = require('../utils/config');
+const config = require('./utils/config');
 
 const sendEmail = async (to, content) => {
   const transporter = nodemailer.createTransport({
