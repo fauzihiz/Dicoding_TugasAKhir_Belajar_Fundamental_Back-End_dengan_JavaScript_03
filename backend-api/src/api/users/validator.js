@@ -2,7 +2,7 @@ const Joi = require('joi');
 const InvariantError = require('../../exceptions/InvariantError');
 
 const UserPayloadSchema = Joi.object({
-  username: Joi.string().required(),
+  username: Joi.string().max(50).required(), //Karena username menggunakan type data VARCHAR(50) di database, Maka kamu bisa gunakan method max untuk membatasi panjang maksimal dari string
   password: Joi.string().required(),
   fullname: Joi.string().required(),
 });
